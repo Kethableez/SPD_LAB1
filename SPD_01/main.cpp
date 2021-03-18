@@ -3,8 +3,6 @@
 #include <iostream>
 #include "rpg_data.h"
 
-using namespace std;
-
 float grade(int cmax_length) {
 	if (cmax_length <= 100000) return 5.0;
 	else if (cmax_length > 100000 and cmax_length <= 100010) return 5.0;
@@ -16,22 +14,13 @@ float grade(int cmax_length) {
 	else return 2.0;
 }
 
-void Save_To_File(std::string filename) {
-	ofstream File(filename);
-
-}
-
 int main() {
 	Data d1, d2, d3, d4;
 
 	Data Data_list[4] = { d1, d2, d3, d4 };
-	string Data_number[4] = {"data.1", "data.2", "data.3", "data.4"};
+	std::string Data_number[4] = {"data.1", "data.2", "data.3", "data.4"};
 
 	int sum = 0;
-	//Data d5;
-
-	//d5.Add(FILENAME, "data.5");
-	//std::cout << d5.cmax();
 
 	for (int i = 0; i < 4; i++) {
 		Data_list[i].Add(FILENAME, Data_number[i]);
@@ -47,7 +36,4 @@ int main() {
 	std::cout << "Ocena: " << grade(sum);
 
 	return 0;
-
-	// Imiê nazwisko, suma d³ugoœci, jaka kolejnoœæ
-	// jaka ocena siê nale¿y <- sprawko
 }

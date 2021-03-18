@@ -41,6 +41,7 @@ struct Data {
 		}
 	}
 	
+	// Function to show order
 	void Show_order() {
 		std::cout << "Kolejnosc: ";
 		for (int i = 0; i < len; i++) {
